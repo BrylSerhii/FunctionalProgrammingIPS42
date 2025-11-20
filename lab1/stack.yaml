@@ -1,0 +1,7 @@
+resolver: lts-21.25
+
+packages:
+- .
+
+extra-deps: []
+# mysql-simple is included in this LTS snapshot, so no extra-deps needed!

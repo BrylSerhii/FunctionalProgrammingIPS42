@@ -1,0 +1,50 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:           department-resources
+version:        0.1.0.0
+build-type:     Simple
+
+library
+  exposed-modules:
+      Database
+      Modules.Resources
+      Modules.ResTypes
+      Modules.Stats
+      Modules.Users
+      Types
+      Utils
+  other-modules:
+      Paths_department_resources
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , mtl
+    , mysql
+    , mysql-simple
+    , text
+    , time
+  default-language: Haskell2010
+
+executable department-resources
+  main-is: Main.hs
+  other-modules:
+      Paths_department_resources
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , department-resources
+    , mtl
+    , mysql
+    , mysql-simple
+    , text
+    , time
+  default-language: Haskell2010
