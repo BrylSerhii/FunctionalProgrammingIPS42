@@ -9,9 +9,9 @@ initDB :: IO AppState
 initDB = do
     putStrLn "Connecting to MySQL..."
     conn <- connect defaultConnectInfo
-      { connectHost     = "127.0.0.1"     -- Matches your Workbench/Docker IP
-      , connectUser     = "serhii"        -- Matches your Workbench/Docker User
-      , connectPassword = "password123"   -- Matches your Docker Password
+      { connectHost     = "127.0.0.1"     
+      , connectUser     = "serhii"        
+      , connectPassword = "password123"   
       , connectDatabase = "info_res"
       }
     putStrLn "Connected successfully."
@@ -21,4 +21,5 @@ initDB = do
 closeDB :: AppState -> IO ()
 closeDB st = do
     close (dbConnection st)
+
     putStrLn "Connection closed."
