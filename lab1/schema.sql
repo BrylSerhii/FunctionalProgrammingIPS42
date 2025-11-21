@@ -57,6 +57,4 @@ CREATE TABLE usage_stats (
     FOREIGN KEY (resource_id) REFERENCES resources(id)
 );
 
--- Додамо трохи початкових даних для тестування
-INSERT INTO authors (full_name, contact_info) VALUES ('Верес М.М.', 'veres@univ.net'), ('Галкін О.В.', 'halkin@univ.net');
-INSERT INTO resource_types (type_name) VALUES ('Навчальний посібник'), ('Стаття'), ('Презентація');
+
